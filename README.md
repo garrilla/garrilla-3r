@@ -1,10 +1,10 @@
 3r - Reactive, Responsive, Rotating Templates
 ===========================================
 
-Intro
+About
 -----
 
-The app gives a basic responsiveness to device size and rotation events through reactive coding. There is no CSS or @MediaQueries in this package. Using a combination of dynamic templates and global helpers, 3r is framework agnostic. It will give you quick and ready responsive app.
+The package gives a basic responsiveness to device size and rotation events through reactive coding. There is no CSS or @MediaQueries in this package. Using a combination of dynamic templates and global helpers, 3r is framework agnostic. It will give you the basic building blocks to make quick and readily responsive app.
 
 Installation
 ------------
@@ -27,7 +27,7 @@ Usage
     {{> b3r}}
     </body>
 ````
-
+)[
 2. include a `<template name="layout">` template block called _layout_ after the body section
 
 3. include  `<meta name="viewport" content="width=device-width" initial-scale=1/>` in the `head` section,
@@ -42,7 +42,7 @@ Then start your app.
 
 If you would like to see a `global helper` message on each view, to help with identification, include the `{{> identifier}}` template within the _layout_ template.
 
-There is an example (body.html)[https://github.com/garrilla/garrilla-3r/blob/master/body.html] on this packages' github to get you on your way. Copy the contents to your project and start the app.
+There is an example [body.html](https://github.com/garrilla/garrilla-3r/blob/master/body.html) on this packages' github to get you on your way. Copy the contents to your project and start the app.
 
 
 There are 7 helpers,
