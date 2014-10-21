@@ -42,7 +42,7 @@ Then start your app.
 
 If you would like to see a `global helper` message on each view, to help with identification, include the `{{> identifier}}` template within the _layout_ template.
 
-There is an example (body.html)[] on this packages' github to get you on your way. Copy the contents to your project and start the app.
+There is an example (body.html)[https://github.com/garrilla/garrilla-3r/blob/master/body.html] on this packages' github to get you on your way. Copy the contents to your project and start the app.
 
 
 There are 7 helpers,
