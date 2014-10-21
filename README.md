@@ -1,4 +1,4 @@
-3r - Reactive, Reactive, Rotating Templates
+3r - Reactive, Responsive, Rotating Templates
 ===========================================
 
 Intro
