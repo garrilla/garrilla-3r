@@ -14,7 +14,7 @@ Installation
 Version
 -------
 
-This version is first published version standing at `0.1.0`.
+This version is first published version standing at `0.1.1`.
 
 Usage
 -----
