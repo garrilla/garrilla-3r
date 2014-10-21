@@ -27,7 +27,7 @@ Usage
     {{> r3r}}
     </body>
 ````
-)[
+
 2. include a `<template name="layout">` template block called _layout_ after the body section
 
 3. include  `<meta name="viewport" content="width=device-width" initial-scale=1/>` in the `head` section,
@@ -55,7 +55,7 @@ istabletLandscape
 isLargeLandscape
 isBigScreen
 ````
-only one will be true at any given time. They are updated each time the _r3r_ template changes because of a rotation.
+only one will be true at any given time. They are updated each time the _r3r_ template changes because of a rotation event.
 
 Here is an example of use:
 ````html
