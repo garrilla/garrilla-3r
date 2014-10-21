@@ -7,10 +7,10 @@ Package.describe({
 
 Package.onUse(function(api) {
   api.versionsFrom('0.9.4');
-  api.addFiles('body.html','client');
-  api.addFiles('garrilla:3r.html','client');
-  api.addFiles('garrilla:3r.js','client');
-  api.use(['templating'],'client')
+  api.addFiles('client/garrilla:3r.html','client');
+  //api.addFiles('body.html','client');
+  api.addFiles('client/garrilla:3r.js','client');
+  api.use(['templating','session','underscore'],'client')
 });
 
 Package.onTest(function(api) {
