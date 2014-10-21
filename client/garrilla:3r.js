@@ -30,13 +30,13 @@
     }
 
 
-    Template.b3r.helpers({
+    Template.r3r.helpers({
         target: function () {
             return [Session.get("template"), screen.mozOrientation || screen.orientation.type || screen.msOrientation , screen];
         }
     });
 
-    Template.b3r.rendered = function () {
+    Template.r3r.rendered = function () {
         Session.set("template", browserTarget(screen.width));
     };
 

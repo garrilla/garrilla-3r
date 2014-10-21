@@ -24,7 +24,7 @@ Usage
 1. place the `{{> r3r}}` template block into the `body` section of your app,
 ````html
     <body>
-    {{> b3r}}
+    {{> r3r}}
     </body>
 ````
 )[
