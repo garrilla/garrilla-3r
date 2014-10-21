@@ -22,19 +22,21 @@ Usage
 **3r** _requires_ that you do the following:
 
 1. place the `{{> r3r}}` template block into the `body` section of your app,
-
+````html
     <body>
     {{> b3r}}
     </body>
+````
 
 2. include a `<template name="layout">` template block called _layout_ after the body section
 
 3. include  `<meta name="viewport" content="width=device-width" initial-scale=1/>` in the `head` section,
-
+````html
     <head>
         <title>Your Title</title>
         <meta name="viewport" content="width=device-width" initial-scale=1/>
     </head>
+````
 
 Then start your app.
 
@@ -44,29 +46,28 @@ There is an example (body.html)[] on this packages' github to get you on your wa
 
 
 There are 7 helpers,
-````
+````html
 isUnsupported
 isMobilePortrait
 isMobileLandscape
-     </nav>
 istabletPortrait
 istabletLandscape
 isLargeLandscape
-     </nav>
 isBigScreen
 ````
 only one will be true at any given time. They are updated each time the _r3r_ template changes because of a rotation.
 
 Here is an example of use:
-
+````html
     {{#unless isMobilePortrait }}
         <p> this will show in all browser/orientations except mobile-portrait </p>
     {{else}}
         <p> this will show *only* in mobile-portrait </p>
     {{/if}}
+````
 
-here;s a similar example, with a _Semantic UI nav bar_
-
+here's a similar example, with a _Semantic UI nav bar_
+````html
      <nav class="ui fixed menu inverted navbar">
          <a href="" class="brand item">Market Evaluator</a>
          {{#unless isMobilePortrait }}
@@ -78,6 +79,7 @@ here;s a similar example, with a _Semantic UI nav bar_
          <a href="" class="item"><i class="reorder icon"></i></a>
        {{/unless}}
      </nav>
+````
 
 TODO
 ----
