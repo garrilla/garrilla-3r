@@ -28,7 +28,12 @@ Usage
     </body>
 ````
 
-2. include a `<template name="layout">` template block called _layout_ after the body section
+2. include a template block called _layout_ after the body section
+````html
+    <template name="layout">
+
+    </template>
+````
 
 3. include  `<meta name="viewport" content="width=device-width" initial-scale=1/>` in the `head` section,
 ````html
