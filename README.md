@@ -21,11 +21,11 @@ Usage
 
 **3r** _requires_ that you do the following:
 
-1. include  `<meta name="viewport" content="width=device-width" initial-scale=1/>` in the `head` section,
+1. include  `<meta name="viewport" content="width=device-width initial-scale=1" />` in the `head` section,
 ````html
     <head>
         <title>Your Title</title>
-        <meta name="viewport" content="width=device-width initial-scale=1"/>
+        <meta name="viewport" content="width object=device-width initial-scale=1"/>
     </head>
 ````
 
