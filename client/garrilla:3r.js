@@ -2,6 +2,7 @@ dimensions = function(){
     if (Meteor.startup) {
     }
     Session.setDefault('width', screen.width);
+    Session.setDefault('agent',navigator.userAgent.match(/(iPhone|iPod|iPad|Android|BlackBerry)/)[0]);
 
     dimensions = {
         isUnsupported: {min: 0, max: 320},
@@ -28,12 +29,12 @@ dimensions = function(){
     });
 
     Template.registerHelper('isLandscape',function(){
-        return screen.width > screen.height;
+        return Session.get('width') > screen.height;
     });
 
     Template.registerHelper('isHandheld',function(){
         return _.contains(['iPhone','iPod','iPad','Android','BlackBerry'],
-                    navigator.userAgent.match(/(iPhone|iPod|iPad|Android|BlackBerry)/)[0]
+            Session.get('agent')
                 );
     });
 

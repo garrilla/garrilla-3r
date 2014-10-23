@@ -1,3 +1,5 @@
+`0.2.8` added reactivity to `isHandheld` and `isLandscape`
+
 `0.2.5` added `isHandheld` helper
 
 `0.2.4` added `isLandscape` helper
