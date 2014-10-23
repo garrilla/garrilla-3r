@@ -31,7 +31,7 @@ Usage
 
 Then start your app.
 
-If you would like to see a `global helper` message on each view, to help with identification, include the `{{> identifier}}` template block within your html - it will tell you what screen 3r thinks we're looking at!
+If you would like to see a `global helper` message on each view, to help with identification, include the `{{> identifier}}` template block within your html - it will tell you what screen 3r thinks we're looking at... it returns text, so you must wrap it in an `html tag` of your choice.
 
 There is an example [body.html](https://github.com/garrilla/garrilla-3r/blob/master/body.html) on this packages' github to get you on your way. Copy the contents to your project and start the app.
 
@@ -80,7 +80,7 @@ here's a similar example, with a _Semantic UI nav bar_
 
 TODO
 ----
-  - change `identifier` template so user can wrap in `html tag` of their choosing
+  - ~~change `identifier` template so user can wrap in `html tag` of their choosing~~
   - create a demo site
   - add more examples
   - ~~test with `iron:router` - I'm hoping that `{{> yeild}}` will go the _layout_ template.~~ (not applicable now we don't use templating)
