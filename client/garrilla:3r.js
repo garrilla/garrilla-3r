@@ -27,6 +27,10 @@ dimensions = function(){
         Session.set('width', screen.width)
     })
 
+    Template.registerHelper('isLandscape',function(){
+        return screen.width > screen.height;
+    })
+
     return dimensions;
 }()
 

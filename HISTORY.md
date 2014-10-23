@@ -1,4 +1,6 @@
-`0.2.2` small change to `identifier` template
+`0.2.4` added `isLandscape` helper
+
+`0.2.3` small change to `identifier` template
 
 `0.2.2` Added `max: Infinity` to `isBigScreens` & added a test
 

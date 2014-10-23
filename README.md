@@ -48,6 +48,8 @@ isBigScreen          // screens 1280 and above
 ````
 only one will be true at any given time. They are updated each time the _r3r_ template changes because of a `resize` event, which in this instance should be triggered by a rotation event. At the moment it does not respond to resizes of of window, _only_ to rotations . The dimensions are kind of arbitrary and based on small amount of search-based research, *if you have views on enhancing this set please create an issue*.
 
+There is also a generic `isLandscape` helper.
+
 Here is an example of use:
 ````html
     {{#unless isMobilePortrait }}
