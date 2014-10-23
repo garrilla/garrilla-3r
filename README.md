@@ -46,7 +46,7 @@ istabletLandscape    // screens 980 upto 1023
 isLargeLandscape     // screens 1024 upto 1279
 isBigScreen          // screens 1280 and above
 ````
-only one will be true at any given time. They are updated each time the _r3r_ template changes because of a `resize` event, which in this instance should be triggered by a rotation event. At the moment it does not responsd to resizes of of window. The dimensions are kinf of arbitray and based on small amount of search-based research, *if you have views on enhancing this set please create an issue*.
+only one will be true at any given time. They are updated each time the _r3r_ template changes because of a `resize` event, which in this instance should be triggered by a rotation event. At the moment it does not respond to resizes of of window, _only_ to rotations . The dimensions are kind of arbitrary and based on small amount of search-based research, *if you have views on enhancing this set please create an issue*.
 
 Here is an example of use:
 ````html
