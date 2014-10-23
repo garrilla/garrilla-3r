@@ -10,7 +10,7 @@ dimensions = function(){
         isTabletPortrait: {min: 767, max: 979},
         isTabletLandscape: {min: 979, max: 1023},
         isLargeLandscape: {min: 1023, max: 1281},
-        isBigScreen: {min: 1281}
+        isBigScreen: {min: 1281, max: Infinity}
     };
 
     _.each(

@@ -14,7 +14,7 @@ Installation
 Version
 -------
 
-This version standing at `0.2.1`.
+This version standing at `0.2.2`.
 
 Usage
 -----
@@ -31,22 +31,22 @@ Usage
 
 Then start your app.
 
-If you would like to see a `global helper` message on each view, to help with identification, include the `{{> identifier}}` template block within the _layout_ template.
+If you would like to see a `global helper` message on each view, to help with identification, include the `{{> identifier}}` template block within your html - it will tell you what screen 3r thinks we're looking at!
 
 There is an example [body.html](https://github.com/garrilla/garrilla-3r/blob/master/body.html) on this packages' github to get you on your way. Copy the contents to your project and start the app.
 
 
 There are 7 helpers,
 ````html
-isUnsupported
-isMobilePortrait
-isMobileLandscape
-istabletPortrait
-istabletLandscape
-isLargeLandscape
-isBigScreen
+isUnsupported        // screen below 320
+isMobilePortrait     // screens 320 upto 479
+isMobileLandscape    // screens 480 upto 767
+istabletPortrait     // screens 768 upto 979
+istabletLandscape    // screens 980 upto 1023
+isLargeLandscape     // screens 1024 upto 1279
+isBigScreen          // screens 1280 and above
 ````
-only one will be true at any given time. They are updated each time the _r3r_ template changes because of a `resize` event, which in this instance should be triggered by a rotation event. At the moment it does not responsd to resizes of of window.
+only one will be true at any given time. They are updated each time the _r3r_ template changes because of a `resize` event, which in this instance should be triggered by a rotation event. At the moment it does not responsd to resizes of of window. The dimensions are kinf of arbitray and based on small amount of search-based research, *if you have views on enhancing this set please create an issue*.
 
 Here is an example of use:
 ````html

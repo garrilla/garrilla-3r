@@ -1,3 +1,5 @@
+`0.2.2` Added `max: Infinity` to `isBigScreens` & added a test
+
 `0.2.1` Bit of re-write
     - stripped out all the template guff
     - re-wrote the regiter helpers section into a dynamic pattern using Blaze
