@@ -1,8 +1,9 @@
 dimensions = function(){
     if (Meteor.startup) {
     }
+    var agent = navigator.userAgent.match(/(iPhone|iPod|iPad|Android|BlackBerry)/);
     Session.setDefault('width', screen.width);
-    Session.setDefault('agent',navigator.userAgent.match(/(iPhone|iPod|iPad|Android|BlackBerry)/)[0]);
+    Session.setDefault('agent', agent ? agent[0] : null );
 
     dimensions = {
         isUnsupported: {min: 0, max: 320},

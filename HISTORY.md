@@ -1,4 +1,6 @@
-`0.2.8` added reactivity to `isHandheld` and `isLandscape`
+`0.2.7` fix on agent for none handhelds
+
+`0.2.6` added reactivity to `isHandheld` and `isLandscape`
 
 `0.2.5` added `isHandheld` helper
 
