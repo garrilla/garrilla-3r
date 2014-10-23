@@ -4,7 +4,7 @@
 About
 -----
 
-The package gives a basic responsiveness to device size and rotation events through reactive coding. There is no CSS or @MediaQueries in this package. Using a combination of dynamic templates and global helpers, 3r is framework agnostic. It will give you the basic building blocks to make quick and readily responsive app.
+The package gives a basic responsiveness to device size and rotation events through reactive coding. There is no CSS or @MediaQueries in this package. Using global helpers, 3r is framework agnostic. It will give you the basic building blocks to make quick and readily responsive app.
 
 Installation
 ------------
@@ -14,28 +14,14 @@ Installation
 Version
 -------
 
-This version is first published version standing at `0.1.1`.
+This version standing at `0.2.1`.
 
 Usage
 -----
 
 **3r** _requires_ that you do the following:
 
-1. place the `{{> r3r}}` template block into the `body` section of your app,
-````html
-    <body>
-    {{> r3r}}
-    </body>
-````
-
-2. include a template block called _layout_ after the body section
-````html
-    <template name="layout">
-
-    </template>
-````
-
-3. include  `<meta name="viewport" content="width=device-width" initial-scale=1/>` in the `head` section,
+1. include  `<meta name="viewport" content="width=device-width" initial-scale=1/>` in the `head` section,
 ````html
     <head>
         <title>Your Title</title>
@@ -45,7 +31,7 @@ Usage
 
 Then start your app.
 
-If you would like to see a `global helper` message on each view, to help with identification, include the `{{> identifier}}` template within the _layout_ template.
+If you would like to see a `global helper` message on each view, to help with identification, include the `{{> identifier}}` template block within the _layout_ template.
 
 There is an example [body.html](https://github.com/garrilla/garrilla-3r/blob/master/body.html) on this packages' github to get you on your way. Copy the contents to your project and start the app.
 
@@ -60,7 +46,7 @@ istabletLandscape
 isLargeLandscape
 isBigScreen
 ````
-only one will be true at any given time. They are updated each time the _r3r_ template changes because of a rotation event.
+only one will be true at any given time. They are updated each time the _r3r_ template changes because of a `resize` event, which in this instance should be triggered by a rotation event. At the moment it does not responsd to resizes of of window.
 
 Here is an example of use:
 ````html
@@ -91,7 +77,6 @@ TODO
   - create a demo site
   - add more examples
   - test with `iron:router` - I'm hoping that `{{> yeild}}` will go the _layout_ template.
-  - give users control of the dimensions object, so you can set your own breakpoints
-  - make the process more flexible so users can add or remove 'views', at the moment they remain fixed to the 7 based on teh helpers
+  - give users control of the dimensions object so they can set your own breakpoints, at the moment they remain fixed to the 7 predefined screen sizes
   - make a distinction between phone/tablet devices and laptop/desktop so that window resize events work
   - think of more things to do

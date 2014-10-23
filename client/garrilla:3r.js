@@ -1,82 +1,33 @@
-
-    if(Meteor.startup){
-
-        dimensions = {
-            unsupported : { min : 0 , max : 320 } ,
-            mobilePortrait : { min :320 , max : 480 } ,
-            mobileLandscape : { min :480 , max : 767 } ,
-            tabletPortrait : { min :767 , max : 979 } ,
-            tabletLandscape : { min :979 , max : 1023 } ,
-            largeLandscape : { min :1023 , max : 1281 } ,
-            bigScreen : { min : 1281 }
-        };
-
-        browserTarget = function (width) {
-            var template;
-            _.filter(dimensions,function(num,key){
-                //console.log(key)
-                if (num.min < width && (num.max ? num.max > width : Infinity))
-                    return template = key })
-            return template;
-        };
-
-        orientationChange = function(){
-            Session.set("template", browserTarget(screen.width));
-        };
-
-        window.addEventListener("resize",orientationChange);
-
-        Session.setDefault("template", "blank");
+dimensions = function(){
+    if (Meteor.startup) {
     }
+    Session.setDefault('width', screen.width);
 
-
-    Template.r3r.helpers({
-        target: function () {
-            return [Session.get("template"), screen.mozOrientation || screen.orientation.type || screen.msOrientation , screen];
-        }
-    });
-
-    Template.r3r.rendered = function () {
-        Session.set("template", browserTarget(screen.width));
+    dimensions = {
+        isUnsupported: {min: 0, max: 320},
+        isMobilePortrait: {min: 320, max: 480},
+        isMobileLandscape: {min: 480, max: 767},
+        isTabletPortrait: {min: 767, max: 979},
+        isTabletLandscape: {min: 979, max: 1023},
+        isLargeLandscape: {min: 1023, max: 1281},
+        isBigScreen: {min: 1281}
     };
 
-    Template.unsupported.helpers({
-       lowestSizeSupported: function(){return dimensions.unsupported.max}
-    });
+    _.each(
+        dimensions, function (item, key) {
+            Blaze._globalHelpers[key.toString()] = new Function(
+                "return Session.get('width') >= " + "dimensions['" + key + "'].min"
+                + " && Session.get('width') < " + "dimensions['" + key + "'].max"
+            )
+        }
+    );
 
-    /** TODO is it possible to register global Helpers dynamically based on the dimensions object ? */
-    Template.registerHelper("isUnsupported",
-        function() {
-            return screen.width >= dimensions.unsupported.min
-            &&  screen.width < dimensions.unsupported.max ;
-        });
-    Template.registerHelper("isMobilePortrait",
-        function() {
-            return  screen.width >= dimensions.mobilePortrait.min
-                &&  screen.width < dimensions.mobilePortrait.max ;
-        });
-    Template.registerHelper("isMobileLandscape",
-        function() {
-            return  screen.width >= dimensions.mobileLandscape.min
-                &&  screen.width < dimensions.mobileLandscape.max ;
-        });
-    Template.registerHelper("isTabletPortrait",
-        function() {
-            return  screen.width >= dimensions.tabletPortrait.min
-                &&  screen.width < dimensions.tabletPortrait.max ;
-        });
-    Template.registerHelper("isTabletLandscape",
-        function() {
-            return  screen.width >= dimensions.tabletLandscape.min
-                &&  screen.width < dimensions.tabletLandscape.max ;
-        });
-    Template.registerHelper("isLargeLandscape",
-        function() {
-            return  screen.width >= dimensions.largeLandscape.min
-                &&  screen.width < dimensions.largeLandscape.max ;
-        });
-    Template.registerHelper("isBigScreen",
-        function() {
-            return screen.width >= dimensions.bigScreen.min ;
-        });
+    window.addEventListener('resize', function () {
+        //do something reactive here
+        Session.set('width', screen.width)
+    })
+
+    return dimensions;
+}()
+
 

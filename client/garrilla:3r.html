@@ -1,27 +1,6 @@
-<template name="r3r">
-    {{#with target}}
-    {{> Template.dynamic template=this.[0] data=this}}
-    {{/with}}
-</template>
-
-<template name="blank">
-    <h5>preparing session...</h5>
-</template>
-
-<template name="unsupported">
-    <h5>this app doesn't support small screens. Your screen should be larger that {{lowestSizeSupported}}px wide.</h5>
-</template>
-
-<template name="mobilePortrait">{{#unless isUnsupported}} {{> layout}} {{/unless}}</template>
-<template name="mobileLandscape">{{#unless isUnsupported}} {{> layout}} {{/unless}}</template>
-<template name="tabletPortrait">{{#unless isUnsupported}} {{> layout}} {{/unless}}</template>
-<template name="tabletLandscape">{{#unless isUnsupported}} {{> layout}} {{/unless}}</template>
-<template name="largeLandscape">{{#unless isUnsupported}} {{> layout}} {{/unless}}</template>
-<template name="bigScreen">{{> layout}}</template>
-
 
 <template name="identifier">
-    <h3>global helper for this template:
+    <h5>blah this template:
         {{#if isUnsupported}} isUnsupported  {{/if}}
         {{#if isMobilePortrait}} isMobilePortrait  {{/if}}
         {{#if isMobileLandscape}} isMobileLandscape  {{/if}}
@@ -29,7 +8,7 @@
         {{#if isTabletLandscape}} istabletLandscape  {{/if}}
         {{#if isLargeLandscape}} isLargeLandscape  {{/if}}
         {{#if isBigScreen}} isBigScreen  {{/if}}
-    </h3>
+    </h5>
 
 </template>
 

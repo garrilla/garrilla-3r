@@ -1,7 +1,7 @@
 Package.describe({
   name: 'garrilla:3r',
   summary: 'A small package to make Meteor  apps respond to device rotation reactively, no CSS.',
-  version: '0.1.1',
+  version: '0.2.1',
   git: 'https://github.com/garrilla/garrilla-3r.git'
 });
 
@@ -11,6 +11,7 @@ Package.onUse(function(api) {
   //api.addFiles('body.html','client');
   api.addFiles('client/garrilla:3r.js','client');
   api.use(['templating','session','underscore'],'client')
+  api.export('dimensions')
 });
 
 Package.onTest(function(api) {
