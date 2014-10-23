@@ -14,7 +14,7 @@ Installation
 Version
 -------
 
-This version standing at `0.2.2`.
+This version standing at `0.2.3`.
 
 Usage
 -----
