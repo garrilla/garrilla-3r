@@ -74,9 +74,10 @@ here's a similar example, with a _Semantic UI nav bar_
 
 TODO
 ----
+  - change `identifier` template so user can wrap in `html tag` of their choosing
   - create a demo site
   - add more examples
-  - test with `iron:router` - I'm hoping that `{{> yeild}}` will go the _layout_ template.
+  - ~~test with `iron:router` - I'm hoping that `{{> yeild}}` will go the _layout_ template.~~ (not applicable now we don't use templating)
   - give users control of the dimensions object so they can set your own breakpoints, at the moment they remain fixed to the 7 predefined screen sizes
   - make a distinction between phone/tablet devices and laptop/desktop so that window resize events work
   - think of more things to do
