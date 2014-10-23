@@ -41,8 +41,8 @@ There are 7 size-specific helpers,
 isUnsupported        // screen below 320
 isMobilePortrait     // screens 320 upto 479
 isMobileLandscape    // screens 480 upto 767
-istabletPortrait     // screens 768 upto 979
-istabletLandscape    // screens 980 upto 1023
+isTabletPortrait     // screens 768 upto 979
+isTabletLandscape    // screens 980 upto 1023
 isLargeLandscape     // screens 1024 upto 1279
 isBigScreen          // screens 1280 and above
 ````
