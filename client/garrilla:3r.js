@@ -25,11 +25,19 @@ dimensions = function(){
     window.addEventListener('resize', function () {
         //do something reactive here
         Session.set('width', screen.width)
-    })
+    });
 
     Template.registerHelper('isLandscape',function(){
         return screen.width > screen.height;
-    })
+    });
+
+    Template.registerHelper('isHandheld',function(){
+        return _.contains(['iPhone','iPod','iPad','Android','BlackBerry'],
+                    navigator.userAgent.match(/(iPhone|iPod|iPad|Android|BlackBerry)/)[0]
+                );
+    });
+
+
 
     return dimensions;
 }()

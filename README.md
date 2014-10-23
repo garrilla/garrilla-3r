@@ -14,7 +14,7 @@ Installation
 Version
 -------
 
-This version standing at `0.2.4`
+This version standing at `0.2.5`
 
 Usage
 -----
@@ -36,7 +36,7 @@ If you would like to see a `global helper` message on each view, to help with id
 There is an example [body.html](https://github.com/garrilla/garrilla-3r/blob/master/body.html) on this packages' github to get you on your way. Copy the contents to your project and start the app.
 
 
-There are 7 helpers,
+There are 7 size-specific helpers,
 ````html
 isUnsupported        // screen below 320
 isMobilePortrait     // screens 320 upto 479
@@ -48,7 +48,11 @@ isBigScreen          // screens 1280 and above
 ````
 only one will be true at any given time. They are updated each time the _r3r_ template changes because of a `resize` event, which in this instance should be triggered by a rotation event. At the moment it does not respond to resizes of of window, _only_ to rotations . The dimensions are kind of arbitrary and based on small amount of search-based research, *if you have views on enhancing this set please create an issue*.
 
-There is also a generic `isLandscape` helper.
+There are also 2 generic helpers,
+````html
+isLandscape
+isHandheld
+````
 
 Here is an example of use:
 ````html
